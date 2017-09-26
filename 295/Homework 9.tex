@@ -1,0 +1,66 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Carter Rhea}
+\title{Math 295: Homework 9}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item Chapter 5.2 $\#$ 3 Which of the functions in exercise 3 of $\S$ 5.1 are one-to-one and which are onto?\\
+\begin{enumerate}
+\item Let $A=\{a,b,c,\}$ and $B=\{a,b\}$, and $\{(a,b),(b,b),(c,a)\}$.\\
+$f$ is not one-to-one but it is onto.
+\item Let $f : \mathbb{R} \to \mathbb{R}$ be the function defined by the formula $f(x)= x^2 - 2x$.\\
+$f$ is neither one-to-one or onto.
+\item Let $f= \{(x,n) \in \mathbb{R} \times \mathbb{Z} | n \leq x < n+1 \}$.\\
+$f$ is not one-to-one, but it is onto.
+\end{enumerate}
+\item Chapter 5.2 \#6 Let $A = \mathcal{P}(\mathbb{R})$. Define $f : \mathbb{R} \to A$ by the formula $f(x) = \{y \in \mathbb{R} | y^2 <x  \}.$
+\begin{enumerate}
+\item Find $f(2)$.\\
+$f(2) = (-\sqrt{2},\sqrt{2})$
+\item Is $f$ one-to-one? Is it onto?\\
+$f$ is  one-to-one, and $f$ is not onto.
+\end{enumerate}
+\item Chapter 5.2 \# 8 Suppose $f : A \to B$ and $g : B \to C$. 
+\begin{enumerate}
+\item Prove that if $g \circ f$ is onto then $g$ is onto.\\
+Proof: Assume $(g \circ f)(x)$ is onto. Thus, by the definition of compisition  $(g\circ f)(x)= g(f(x))$. Since, $g(f(x))$ is onto, for every $c \in C$, there exists and $a \in A$ such that $g(f(a))=c$. Since $f :A \to B, f(a)=b$. Thus $g(f(a))=g(b)$. And therefore for all $c \in C$ there exists at least one $b \in B$ such that $g(b)=c$  . Thus $g(x)$ is onto.
+\item Prove that if $g \circ f$ is one-to-one then $f$ is one-to-one.\\
+Proof: Assume $(g \circ f)(x)$ is one-to-one. Thus, by the definition of composition, $g(f(x))$ is one-to-one. Given $a_1 , a_2 \in A$, by the definition of one-to-one $(g \circ f)(a_1)=(g \circ f)(a_2)$, which implies $a_1=a_2$. Also $g(f(a_1))=g(f(a_2))$ which now implies $f(a_1)=f(a_2)$. Thus, by the definition of one-to-one, $f$ is one-to-one.
+\end{enumerate}
+\item Chapter 5.3 \# 2 Let $F$ be the funtion defined in exercise 4(b) of $\S$ 5.1. If $X \in B$, what is $F^{-1}(X)$?
+$F^{-1}(X)= A \setminus X$
+\item Chapter 5.3 \# 6 Let $A = \mathbb{R}\setminus \{2\}$, and let $f$ be the function with domain $A$ defined by the formula $$f(x)=\frac{3x}{x-2}$$
+\begin{enumerate}
+\item Show that $f$ is  a one-to-one, onto function from $A$ to $B$ for some set $B \subseteq \mathbb{R}$. What is the set $B$. \\ 
+One-to-one: According to the definition of $f$, we have\\  $$f(a_1)=f(a_2) $$ iff $$\frac{3a_1}{a_1 -2}=\frac{3a_2}{a_2 -2} $$
+iff $$3a_1(a_2 -2)=3a_2(a_1 -2) $$
+iff $$3a_1 a_2 - 6a_1 = 3a_1 a_2 2- 6 a_2 $$
+iff $$-6a_1=-6a_2$$
+iff $$a_1=a_2 $$
+Thus there can be no real numbers $a_1$ and $a_2$ for which $f(a_1)=f(a_2)$ and $a_1 \not = a_2$. Thus $f$ is one-to-one.\\
+Onto: Let $y$ be an arbitrary real number. Let $x= \frac{-2x}{3-y}$. Then $g(x)= \frac{3x}{x-2}=\frac{3\frac{-2y}{3-y}}{\frac{-2y}{3-y}-2}=\frac{\frac{-6y}{3-y}}{\frac{-2y-6+2y}{3-y}} = \frac{-6y}{-6}=y$. Thus $\forall y \in \mathbb{R} \exists x \in \mathbb{R} (g(x)=y)$.Therefore, $f$ is an arbitrary function. \\
+The set $B= \mathbb{R} \setminus \{3\}$.\\
+It has been shown that $f$ is one-to-one and unto from $A$ to $B$ for some set $B \subseteq \mathbb{R}$.
+\item Find a formula for $f^{-1} (x)$.\\
+$f^{-1} = \frac{2x}{x-3}$
+\end{enumerate}
+\item Chapter 5.3 \# 13 Suppose $f : A \to B$ and $f$ is onto. Let $R=\{(x,y)\in A \times A | f(x)=f(y) \}$. By exercise 17(a) of $\S$ 5.1, R is an equivalence relation on $A$.
+\begin{enumerate}
+\item  Prove that there is a function $h: A \setminus R \to B$ such that for all $x \in A$, $h([x]_R) = f(x)$.\\
+Let $h=\{(X,y) \in A\setminus R \times B | \exists x \in X (f(x) =y) \}$. Pick $[x] \in A\setminus R$. Suppose $[a]=[x]$ which implies $aRx$, which by the definition of a relation, $f(a)=f(x)$.\\ Then, 
+$$h([a])=f(a)$$
+and 
+$$h([x])=f(x)$$
+So, $h([a])=h([x])$
+Thus, $h$ is a function.
+\item One-to-one: Suppose $h([a])=h([b]) $. Then $f(a)=f(b)$. So by the definition of R, $aRb$ implies $a \in [b]$. Furthermore, $bRa$ implies $b \in [a]$. Thus based on Lemma (4.6.5), $[a]=[b]$. Thus $h$ is one-to-one.\\
+Onto: Since $f$ is onto, $\forall b \in B \exists a \in A (f(a)=b).$ Since, $A\setminus R = \{[x] \mid x \in A \}, a \in [a] \in A\setminus R.$ Thus $h([a])=f(a)=b$. Therefore $h$ is onto because we found for any arbitrary $b \in B \exists a \in [a] (h([a])=b).$
+\end{enumerate}
+\end{enumerate}
+\end{document}

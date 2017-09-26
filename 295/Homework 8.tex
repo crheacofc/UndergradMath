@@ -1,0 +1,73 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Carter Rhea}
+\title{Math 295: Homework 8}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item Chapter 4.6 \# 4 Which of the following relations $\mathbb{R}$ are equivalence relations? For those that are equivalence relations, what are the equivalence classes?
+\begin{enumerate}
+\item $R = \{(x,y) \in \mathbb{R} \times \mathbb{R} | x - y \in \mathbb{N}\}$\\
+R is not an equivalance relation because it fails to satify the requirement regarding symmetry in order to be an equivalence relation. $x,y \in R$ and $xRy$. Then $x -y\in \mathbb{N}$. Thus $y-x = - (x-y) \not \in \mathbb{N}$ since the negative of a natural number is not a natural number because by definition $\mathbb{N}= \{0,1,2,3...\}$.\\
+Example: Allow $x=2$ and $y=1$. Then $x-y=2-1=1 \in \mathbb{N}$, but $y-x = 1-2 = -1 \not \in \mathbb{N}$.
+\item $S =\{(x,y) \in \mathbb{R} \times \mathbb{R} |  x - y \in\mathbb{Q} \}$\\
+Reflexive: Suppose $x \in \mathbb{R}$. Then $x-x=o \in \mathbb{Q}$, so $(x,x) \in S$, and therefore S is reflexive.\\
+Symmetric: Suppose $(x,y) \in S$. By the definition of S, this means that $x-y \in \mathbb{Q}$. Then $y-x=-(x-y)\in \mathbb{Q}$ since the negative of a rational number is also a rational number,  thus $(y,x) \in S$. Because $(x,y)$ was an arbitrary element of S, S is symmetric.\\
+Transitive: Suppose $(x,y) \in S$ and $(y,z) \in S$.Then $x-y \in \mathbb{Q}$ and $y-z \in \mathbb{Q}$. It follows that the sum $x-y+y-z=x-z \in \mathbb{Q}$, so $(x,z) \in S$, as required.\\
+Thus S is an equivalence relation on $\mathbb{R}$.\\
+Equivalence Class: $ \mathbb{R} / S=\{[0]\}\cup \{[q] \mid q\in \mathbb{R} \setminus \mathbb{Q}\}$,  where $[0] =  \mathbb{Q}$, and $\{[q]\mid q\in \mathbb{R} \setminus \mathbb{Q}\} $ such that each irrational number added with a rational is the equivalence class of the irrational number alone.  \\
+\item $T = \{(x,y) \in \mathbb{R} \times \mathbb{R} | \exists n \in \mathbb{Z} (y = x 10^n \}$\\
+Reflexive: Suppose $x \in \mathbb{R}$. Then $\exists n \in \mathbb{Z} (x = x10^n)$, $n=0$ satisfies the equations, so $(x,x)\in T$, and therefore $S$ is reflexive.\\
+Symmetric: Suppose $(x,y) \in T$. By the definition of S, this means $\exists n \in \mathbb{Z} (y=x10^n )$. Then $\exists n \in \mathbb{Z} (x=y10^n)$, thus $(y,x) \in T$. Since $(x,y)$ was an arbitrary element of T, T is symmetric.\\
+Transitive: Suppose $(x,y) \in T$ and $(y,z) \in T$. Then $\exists n\in \mathbb{Z} (y= x10^n )$ and $ \exists m \in \mathbb{Z} (z= y10^m)$. Thus $\exists n \in \mathbb{Z} \ \exists m \in \mathbb{Z} \ (z10^{-m}=x10^n) $. Then $\exists n \in \mathbb{Z} \ \exists m \in \mathbb{Z} (z= x 10^{n+m})$. By substuting $n+m = s$, $\exists s \in \mathbb{Z} (z=x10^s)$, so $(x,z)\in T$ ,as required.  \\
+Thus T is an equivalence relation on $\mathbb{R}$.\\
+Equivalence Class:  $ \mathbb{R} / T = \{[x] \mid x \in \mathbb{R}\}$ where $[b] = \{a \in \mathbb{R} \mid \exists n \in \mathbb{Z} a=b10^n\}$\\
+\end{enumerate}
+\item Chapter 4.6 \#10 Let $C_m$ be the congruence mod $m$ relation defined in the text, for a positive integer m.
+\begin{enumerate}
+\item Complete the proof that $C_m$ is an equivalence relation on $\mathbb{Z}$ by showing that it is reflexive and symmetric.\\
+$C_m = \exists k \in \mathbb{Z} (x-y=km)$\\
+Reflexive: Suppose $x \in \mathbb{R}$. Then $x-x=0=km$ for some $k \in \mathbb{Z}$, namely, $z=0$. So $(x,x) \in C_m$, and therefore $C_m$ is reflexive.\\
+Symmetric: Suppose $(x,y) \in C_m$. By the definition of $C_m$, $ \exists k \in \mathbb{Z} (x-y=km)$. Then $\exists k \in \mathbb{Z} (y-x=-(x-y)=km)$.Thus, since $k$ can be negative, $(y,x) \in C_m$. Since $(x,y)$ was an arbitrary element of $C_m$, $C_m$ is symmetric. 
+\item Find all of the equivalence classes for $C_2$ and $C_3$. How many equivalence classes are there in each case? In general, how many equivalence classes do you think there are for $C_m$?\\
+Equivalence class for $C_2$: $\{[x]|x \in \mathbb{Z}\}=\{[0],[1]\}$, where $[0]=\{n \in \mathbb{Z}|2n\}$ and $[1]=\{m \in \mathbb{Z}|2m+1\}$ .\\
+Equivalence class for $C_3$: $\{[x]|x \in \mathbb{Z}\}=\{[0],[1],[2]\}$, where $[0]=\{n \in \mathbb{Z}|3n\}$, $[1]=\{m \in \mathbb{Z}|3m+1\}$, and $[2]=\{s \in \mathbb{Z}|3s+2\}$ .\\
+In general, $C_m$ will have $m$ equivalence classes.
+\end{enumerate}
+\pagebreak
+\item Chapter 4.6 \# 11 Prove that for every integer $n$, either $n^2 \equiv 0 (mod 4) $ or $n^2 \equiv 1 (mod 4)$.\\
+Rewritten in symbols: $\forall n (\exists k \in \mathbb{Z}(n^2 = 4k)$ or $\exists w \in \mathbb{Z}(n^2  = 4w +1))$.\\
+Proof: Let $n \in \mathbb{Z}$, thus $n$ is either even or odd.\\
+Case 1: Assume n is even. If n is even, then $n=2r$ such that $r \in \mathbb{Z}$. Thus $n^2 = (2r)^2 = 4r^2$. Thus $n^2 =4k$ with $k \in \mathbb{Z}$.\\
+Case 2: Assume $n$ is odd. If $n$ is odd, then $n=2s+1$ such that $s \in \mathbb{Z}$. Thus $n^2 = (2s+1)^2= 4s^2 +4s +1= 4(s^2+s)+1$. Thus $n^2 = 4w+1$ with 4$w \in \mathbb{Z}$.\\
+Thus  for every integer $n$, either $n^2 \equiv 0 (mod 4) $ or $n^2 \equiv 1 (mod 4)$.\\
+\item Chapter 5.1 \# 1 
+\begin{enumerate}
+\item Let $A = \{1,2,3\}, B= \{4\},$ and $f=\{(1,4),(2,4),(3,4)\}.$ Is $f$ a function from $A$ to $B$?\\
+Yes, because there exists only one $y$ for each $x$, and each $x$ is used.\\
+\item Let $A=\{1\}, B= \{2,3,4\}$, and $f= \{(1,2),(1,3),(1,4)\}$. Is $f$ a function from $A$ to $B$?\\
+No, because there exists multiple $y$-values for each $x$.\\
+\item Let $C$ be the set of all cars registered in your state, and let $S$ be the set of all finite sequences of letters and digits. Let $L=\{(c,s) \in C \times S |$ the liscnce plate number of the car $c$ is $s\}$. Is $L$ a funciton from $C$ to $S$?\\
+Yes, because there exists only one liscence plate ,$s$, for each car, $c$, registered in the state. Thus, each $c$ has one and only one corresponding $s$, so $L$ qualifies as a function from $C$ to $S$.
+\end{enumerate}
+\item Chapter 5.1 \# 4
+\begin{enumerate}
+\item Let $N$ be the set of all countries and $C$ the set of all cities. Let $H : N \to C$ be the function defined by the rule that for every country $n$, $H(n) = $the capital of the country $n$. What is $H(Italy)$?\\
+Rome!
+\item Let $A=\{1,2,3\} $ and $B= \mathcal{P}(A)$. Let $F: B \to B $ be the function defined by the formula $F(X) = A\setminus X$. What is $F(\{1,3\})$?\\
+$F(\{1,3\})= A \setminus \{1,3\}= \{2\}$.
+\item Let $f= \mathbb{R} \to \mathbb{R}\times \mathbb{R}$ be the function defined by the formula $f(x)= (x+1,x-1)$. What is $f(2)$?\\
+$f(2)=(2+1,2-1)=(3,1)$
+\end{enumerate}
+\item Chapter 5.1 \# 6 Let $f$ and $g$ be functions from $\mathbb{R}$ to $\mathbb{R}$ defined by the following formulas:
+$$f(x) = \frac{1}{x^2 +2}  \ \ \ \ \ \ \ \  \       g(x)=2x-1$$
+Find formulas for $(f \circ g)(x)$ and $(g \circ f)(x)$.\\
+$$(f \circ g)(x)= \frac{1}{(2x-1)^2 +2}=\frac{1}{4x^2-4x+1+2}=\frac{1}{4x^2-4x+3}$$
+$$(g\circ f)(x)= 2\frac{1}{x^2 +2} -1=\frac{2}{x^2+2}-1=\frac{2}{x^2+2}-\frac{x^2+2}{x^2+2}=\frac{-x^2}{x^2+2}$$
+\end{enumerate}
+\end{document}

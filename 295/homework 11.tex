@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{forloop}
+\newcommand{\aline}{\\\hline &&&&\rule{0cm}{1cm}}
+
+\begin{document}
+\newcounter{theyflines}
+
+a paragraph of text
+\medskip
+
+\begin{tabular}{|p{2cm}|p{3cm}|p{2cm}|p{2cm}|p{3cm}|}
+\hline
+Name & Item & Pickup & Return& Signature
+\forloop{theyflines}{1}{\value{theyflines} < 15}{\aline}\\
+\hline
+\end{tabular}
+\medskip
+
+a final paragraph of text.
+\end{document}

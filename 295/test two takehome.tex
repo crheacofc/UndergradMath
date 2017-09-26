@@ -1,0 +1,34 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Carter Rhea}
+\title{Math 295: Test 2 Take-home}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item Prove the following statement:  Let $x,y \in R $. If $x$ and $y$ are nonnegative, then $\frac{x+y}{2} \geq \sqrt{xy} $.\\
+Proof by contradiction: Assume $x$ and $y$ are negative ($x<0$ and $y < 0$) and $\frac{x+y}{2} \geq \sqrt{xy}$. If $x$ and $y$ are both negative, then $\frac{x+y}{2}<0$ because two negative numbers added together and subsequently divided by two is still a negative number. Also, if $x$ and $y$ are both negative, then $\sqrt{xy} >0$ because the product of two negative numbers is positive. Therefore $\frac{x+y}{2} < \sqrt{xy}$ because a negative number is always smaller than a positive number. However, this contradicts the fact that $\frac{x+y}{2} \geq \sqrt{xy}$. Therefore, $x$ and $y$ need to be nonnegative. \\
+Note: The cases involving either $x$ or $y$ (exclusively) being negative was shown because if either was negative, then $\sqrt{xy}$ would equal an imaginary number.\\
+\item Suppose $A$, $B$, and $C$ are sets. Prove that $A \cup C \subseteq B \cup C$ if and only if $A \setminus C \subseteq B \setminus C$.\\
+Proof: ($\rightarrow$) Assume $A \setminus B \subseteq B \setminus C$ and also assume $A \cup C$. \\
+Case 1: Assume $ x\in A$ and $x \not \in C$. If $x \in A$ and $x \not \in C$, then $x \in B$ by the given ($A \setminus B \subseteq B \setminus C$). Thus $x \in (B \cup C)$, as required.\\
+Case 2: Assume $x \in C$ and $x \not \in A$. If $x \in C$, then $x \in (B \cup C)$, as required.\\
+Case 3: Assume $x \in A$ and $x \in C$. If $x \in C$, then $x\in (B \cup C)$, a required. \\
+Therefore, if $x \in (A \cup C)$ ,then $x \in (B \cup C$). Which means ($A \cup C \subseteq B \cup C$), as required.\\
+($\leftarrow$) Assume $(A \cup C) \subseteq (B \cup C$), and also assume $A \setminus C$. $x \in A$ and $x \not \in C$. According to the assumed statement, ($(A \cup C) \subseteq (B \cup C$)), since $x \in A$, then $x \in (B \cup C)$. However, since $x \not \in C$ (this is from the original assumption $x \in A \setminus C$), $x \in B$. Thus, if $x \in A \setminus C$, then $x \in B \setminus C$. \\
+Therefore, $A \cup C \subseteq B \cup C$ if and only if $A \setminus C \subseteq B \setminus C$.\\
+\item Prove that $Dom(S \circ R) \subseteq Dom(R)$.\\
+Assume $x \in Dom(S \circ R)$. Thus, by the definition of the domain of  S composed with R, $Dom(S \circ R)= \{a \in A | \exists c \in C ((a,c) \in S \circ R) \}, x \in a \in A$, which means $ x \in A$. By the definition of a composition, $R \in A \times B$ and $S \in B \times C$. Therefore,  by the definition of the domain of R, $\{a\in A | \exists b \in B ((a,b) \in R) \}$, $x \in Dom(R)$ since $x \in A$.  Thus, if $x \in Dom(S \circ R)$, then $x \in Dom(R)$, as required ($Dom(S \circ R) \subseteq Dom(R)$
+\item Show by example that $Dom(S \circ R) = Dom(R)$ may be false.\\
+Proof: Let $R= \{(1,3)(1,4)(2,5)(3,6)\}$ \\
+Let $S=\{(3,2)(4,3)\}$\\
+Thus, $S \circ R= \{(1,2)(1,3)\}$\\
+Then, $Dom(S\circ R)= \{1\}$
+and $Dom(R) = \{1,2,3\}$.\\
+ Therefore $Dom(S \circ R) \not = Dom(R)$.
+\end{enumerate}
+\end{document}

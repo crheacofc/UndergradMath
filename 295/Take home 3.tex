@@ -1,0 +1,35 @@
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Carter Rhea}
+\title{Math 295: Take Home Test 3}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item Let $A = \mathbb{R}$. Define $R= \{(x,y) \in \mathbb{R} \times \mathbb{R} \mid y=x^{3n}$ for some $n \in \mathbb{Q}\}$\\
+Prove that $R$ is symmetric and transitive.\\
+Symmetric: Suppose $(x,y) \in R$. By the definition of $R$, this means $\exists n \in \mathbb{Q}(y=x^{3n})$. Then $\exists n \in \mathbb{Q}(x=y^{3n})$, thus $(y,x) \in R$ since there exists an $n$ which satisfies the relation. Since $(x,y)$ was an arbitrary element of $R$, $R$ is symmetric. \\
+Transitive: Suppose $(x,y) \in R$ and $(y,x) \in R$. Then $\exists n \in \mathbb{Q}(y=x^{3n})$ and $\exists m \in \mathbb{Q}(z=y^{3m}).$ Thus, $\exists n \in \mathbb{Q} \exists m \in \mathbb{Q}(x^{3n}=z^{\frac{m}{3}})$. Then, $\exists n \in \mathbb{Q} \exists m \in \mathbb{Q}(z=x^{3(m+n)})$. Substituting $s=m+n, \exists s \in \mathbb{Q}(z=x^{3s})$, so $(x,z)\in R$, as required. Q.E.D.
+\item Suppose that $R_1$ and $R_2$ are equivalence relations on a set $A$. Prove that $R_1 \cap R_2$ is also an equivalence relation on $A$.\\
+$R_1=\{(x,y)\in A \times A \mid xR_1y \}$\\
+$R_2=\{(x,y)\in A \times A \mid xR_2y \}$\\
+$R_1\cap R_2=\{(x,y)\in A \times A \mid xR_1y \cap xR_2y \}$\\
+Proof: Reflexive: Let $a \in A$. Then $(a,a) \in R_1$ because $R_1$ is reflexive, and $(a,a) \in R_2$ because $R_2$ is reflexive. So $(a,a) \in R_1 \cap R_2$. Thus $R_1 \cap R_2$ is reflexive, as required.\\
+Symmetric: Let $(a,b) \in R_1$. Since $R_1$ is symmetric, $(b,a)\in R_1$. Also let $(a,b) \in R_2$. Since $R_2$ is symmetric, $(b,a) \in R_2$. So  $(b,a) \in R_1 \cap R_2$. Thus, $R_1 \cap R_2$ is symmetric, as required.\\
+Transitive: Let $(a,b) \in R_1$ and $(b,c) \in R_1$. Since $R_1$ is transitive, $(a,c) \in R_1$.Also, let $(a,b) \in R_2$ and $(b,c) \in R_2$. Since $R_2$ is transitive, $(a,c) \in R_2$. So $(a,c) \in R_1 \cap R_2$. Thus $R_1 \cap R_2$ is transitive, as required.\\
+Therefore, $R_1 \cap R_2$ has been shown to be an equivalence class on $A$. Quod Erat Demonstratum.
+\item Let $f: \mathbb{R} \to \mathbb{R}$ defined by $f(x)=x^2$. Find: \\
+\begin{enumerate}
+\item $f([-1,2])=[1,4]	$.
+\item $f^{-1}({9})$\\ $f^{-1}(x)=\pm x^{1/2}$.\\ So $f^{-1}(x)= \pm\{3\}$
+\item $f^{-1}(\{x \mid x >9\})=(-\infty , -3) \cup (3,\infty)$
+\end{enumerate}
+
+
+\end{enumerate}
+\end{document}

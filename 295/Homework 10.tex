@@ -1,0 +1,51 @@
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Carter Rhea}
+\title{Math 295: Homework 10}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item Chapter 5.4 \# 2d Suppose that Y and Z are subsets of B. Will it always be true that $Y \subseteq Z \iff f^{-1}(Y)\subseteq f^{-1}(Z)$?\\
+$(\rightarrow)$ Assume $Y \subseteq Z$ and $Y \subseteq B$ and $Z \subseteq B$. Let $a \in f^{-1}(Y)$. So $f(a)=y$. Then, by assumption, $f(a) \in Z$.Thus $f^{-1}(f(a)) \subseteq f^{-1}(Z)$, which implies that $a \in f^{-1}(Z)$. Since $a$ was  arbitrary, $Y \subseteq Z \to f^{-1}(Y) \subseteq f^{-1}(Z)$.\\
+($\leftarrow$) Assume $f^{-1}(Y) \subseteq f^{-1}(Z)$ and also $Y \subseteq B$ and $Z \subseteq B$. Let $a \in f^{-1}(Y)$. So $f(a)=Y$. Since $f^{-1}(f(a)) \subseteq f^{-1}(Z)$, $f(a) \in Z$. Since $a$ was arbitrary, $f^{-1}(Y) \subseteq f^{-1}(Z) \to Y \subseteq Z$. 
+\item Chapter 5.4 \# 3 Suppose $X \subseteq A$. Will it always be true that $f^{-1}(f(X))=X$? \\
+Take figure 1 from chapter 5.4 from the book as an example. The relation is not one-to-one. Take $X=\{1,2\}$. Then $f(X)=f(\{1,2\})=\{4,5\}.$ Now take $f^{-1}(\{4,5\})= \{1,2,3\}$. Thus, it has been shown that $f^{-1}(f(X))$ does not always equal $X$. I hypothesize that if $f$ is injective, then $f^{-1}(f(X))=X$. 
+\item  Chapter 6.1 \# 2 Prove that for all $n \in \mathbb{N}, 0^2 + 1^2 + 2^2 + .... + n^2= n(n+1)(2n+1)/6$\\
+Base Case: $0^2 = \frac{0(1)(1)}{6}$ which is equivalent to $0=0$ which is true. So $P(0)$ is true.\\
+Inductive Case: Let $n \in \mathbb{N}$. Assume $P(n)$ is true. Thus $\sum\limits_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}$.\\ Thus, adding $(n+1)^2$ to both sides. 
+$$\sum\limits_{i=1}^n i^2 + (n+1)^2= \frac{n(n+1)(2n+1)}{6} + (n+1)^2  $$ which implies
+$$\sum\limits_{i=0}^{n+1} i^2 = \frac{n(n+1)(2n+1) +6(n+1)^2}{6} $$ which implies
+$$\sum\limits_{i=0}^{n+1} i^2 = \frac{(n+1)(2n^2+7n+6)}{6} $$ which implies
+$$\sum\limits_{i=0}^{n+1} i^2 = \frac{(n+1)(n+2)(2n+3)}{6} $$
+Which is $P(n+1)$. Q.E.D.
+\item Chapter 6.1 \# 5 Prove that for all $n \in \mathbb{N}, 0*1 +1*2 +2*3 +... + n(n+1)= n(n+1)(n+2)/3$.\\
+Base Case: $P(0)= 0(1)=0(1)(2)/3 $ which is equivalent to $0=0$ which is true. Thus $P(0)$ is true.\\
+Inductive Case: Let $n \in \mathbb{N}$. Assume $P(n)$ is true. Thus, $\sum\limits_{i=1}^n n(n+1)= \frac{n(n+1)(n+2)}{3} $\\
+Adding $(n+1)(n+2)$ to both sides, 
+$$\sum\limits_{i=1}^n n(n+1) + (n+1)(n+2)= \frac{n(n+1)(n+2)}{3} + (n+1)(n+2)  $$ which implies 
+$$\sum\limits_{i=1}^{n+1} n(n+1)= \frac{n(n+1)(n+2)}{3} + \frac{3(n+1)(n+2)}{3}  $$ which implies 
+$$\sum\limits_{i=1}^{n+1} n(n+1)= \frac{(n+1)(n^2+5n+6)}{3} $$ which implies 
+$$\sum\limits_{i=1}^{n+1} n(n+1)= \frac{(n+1)(n+2)(n+3)}{3}  $$ 
+Which is $P(n+1)$. Q.E.D.
+\item  Chapter 6.1 \# 12 Prove that for all integers $a$ and $b$ and all $n \in \mathbb{N}, (a-b)\mid (a^n + b^n)$.\\
+Base Case:$ k(a-b)= 1-1=0, so (a-b)=0.$ Thus $a-b\mid a^n- b^n$\\
+Induction Case: Let $n$ be an arbitrary natural number and suppose $a-b\mid a^n-b^n$. Then we can chose an integer $k$ such that $(a-b)k=a^n - b^n$. Thus,
+$$a^{n+1}-b^{n+1} = a^n +a - b^n -b$$
+which is equal to
+$$(a^n - b^n) +(a-b) $$
+which is equal to
+$$k(a-b)+(a-b) $$
+which is equal to
+$$(k+1)(a-b) $$
+Let $m=k+1$ such that $m \in \mathbb{Z}$, thus
+$$(k+1)(a-b)=m(a-b)$$
+Therefore $(a-b)\mid a^{n+1}-b^{n+1} $, as required.
+Q.E.D.
+\end{enumerate}
+\end{document}
